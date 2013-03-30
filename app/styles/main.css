@@ -1,5 +1,5 @@
 body {
-    background: #fafafa;
+    background: #000;
 }
 
 .hero-unit {
@@ -62,7 +62,6 @@ body {
 
 #animatedback p {
 	font-family: 'Aldrich', sans-serif;
-	color: #2ef761;
 	background-color: #000;
 	font-size: 0.9em;
 }
@@ -70,5 +69,11 @@ body {
 	color: #2ef761;
 }
 .warning-text {
-	color: #ff0000!important;
+	color: #ff0000;
+}
+.description {
+	font-family: 'Aldrich', sans-serif;
+	color: #2ef761;
+	font-size: 0.8em;
+	margin:0 auto;
 }

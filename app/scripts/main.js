@@ -86,6 +86,7 @@ CRISTOBAL.spaceship = (function ($) {
 			} ,10 );
 			$('#main-spaceship img').fadeOut(5000,function() {
 				config.messageBox.removeClass('warning-text');
+				config.messageBox.addClass('console-text');
 				displayMessages( 6 );
 				msgTimeout = setTimeout(function() {
 					displayMessages( 7 );
