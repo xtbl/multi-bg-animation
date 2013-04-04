@@ -31,7 +31,8 @@ CRISTOBAL.spaceship = (function ($) {
 		target_difference = 800,
 		target_base = 3000,
 		currentMessage = 0,
-		clickNumber = 0
+		clickNumber = 0,
+		timer
 
 		config = {
 			spaceShipContainer: $("#main-spaceship"),
@@ -151,8 +152,12 @@ CRISTOBAL.spaceship = (function ($) {
 		},
 
 		bindUIActions = $('#main-spaceship').click(function() {
-			console.log('spaceship click');
-			accelerationActions();
+			// using a debounce to avoid too much clicking by the user
+			if(timer){
+				console.log('spaceship click');
+				clearTimeout(timer);
+			}
+			timer = setTimeout(accelerationActions,1000);
 		}),
 
 		init = function() {
